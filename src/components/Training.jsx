@@ -348,10 +348,30 @@ function Training({ inputDatatoParent }) {
           </tbody>
         </table>
       </div>
+      <hr />
+      <div className="training-container py-4">
+        <h2 className="text-2xl font-bold my-3">useContext</h2>
+        
+        <p className="text-xl font-bold my-3">What is useContext?</p>
+        <p>
+        useContext is a React hook that lets you access data stored in a Context without passing props manually down multiple levels (a process called prop drilling).
+
+        It works with the React Context API, which is made up of:
+        </p>
+        <ul>
+          <li><code className="text-red-500">React.createContext() → Creates the Context.</code></li>
+          <li><code className="text-red-500">Provider → Supplies the data.</code></li>
+          <li><code className="text-red-500">useContext() → Consumes the data.</code></li>
+        </ul>
+        
+        <p>This section demonstrates how to use the useContext hook in React.</p>
+
+      </div>
+      <hr />
       <div className="training-container py-4">
         <h2 className="text-2xl font-bold my-3">Need to Learn</h2>
         <code className="text-gray-800">
-          props, state, rest operator, spread operator, filter, map, reduce, useEffect, fetch data from API, form handling, conditional rendering, list rendering, CSS Styling,  lifecycle methods, hooks, context API, and more.
+          useContext, props, state, rest operator, spread operator, filter, map, reduce, useEffect, fetch data from API, form handling, conditional rendering, list rendering, CSS Styling,  lifecycle methods, hooks, context API, and more.
         </code>
         <p>
           {" "}

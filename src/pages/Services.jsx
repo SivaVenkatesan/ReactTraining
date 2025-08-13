@@ -49,8 +49,8 @@ function Services() {
 
     return (
         <>
-            <h2>User List Page with API Integration</h2>
-            <h2>API Integration for useEffect for API calls, error handling and Loading state management</h2>
+            <h1 className='text-2xl font-bold my-4 text-red-500'>User List Page with API Integration</h1>
+            <h3 className='text-lg font-bold my-4'>API Integration for useEffect for API calls, error handling and Loading state management</h3>
             <div className="mb-4 mt-4">
                 <input
                     type="text"

@@ -11,7 +11,7 @@ import Services from './pages/Services';
 import Blog from './pages/Blogs';
 import Teams from './pages/Teams';
 import PageNotFound from './pages/PageNotFound';
-import Training from './components/Training';
+// import Training from './components/Training';
 import { Outlet } from 'react-router-dom';
 
 
@@ -51,7 +51,7 @@ function App() {
      <>
       <Header userDetails={userDetails} />
       <Outlet/>
-      <div className='container py-7'>
+      <div className='container py-7 min-h-[calc(100vh-200px)]'>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -62,7 +62,7 @@ function App() {
         <Route path="/teams" element={<Teams />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
-        <Route path='/training' element={<Training/>} />
+        {/* <Route path='/training' element={<Training/>} /> */}
       </Routes>
       </div>
       <Outlet/>
