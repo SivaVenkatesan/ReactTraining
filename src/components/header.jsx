@@ -14,8 +14,10 @@ function Header() {
                 <nav className="container mx-auto">
                     <div className='flex justify-between items-center'>
                         <div className='flex items-center gap-2'>
+                            <Link to="/home" className='flex items-center gap-2'>
                             <img src={logo} alt="logo" className='w-10 h-10'/>
                             <h1 className='text-2xl font-bold'>React</h1>
+                            </Link>
                         </div>
                     </div>
                     <ul className="nav-links inline-flex gap-10 justify-center w-full">

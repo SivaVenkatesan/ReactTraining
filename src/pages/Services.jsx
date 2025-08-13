@@ -5,7 +5,8 @@ function Services() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [search, setSearch] = useState("");
-
+    // https://dummyjson.com/posts
+    // https://jsonplaceholder.typicode.com/posts
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then((response) => {
