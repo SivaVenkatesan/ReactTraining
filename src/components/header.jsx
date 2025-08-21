@@ -2,16 +2,21 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/react.svg'
 import { useLocation } from 'react-router-dom';
-
+import { ThemeContext  } from '../context/ThemeContext';
+import { useContext } from 'react';
 
 function Header() {
     const location = useLocation();
     const hideHeader = location.pathname === '/login';
+    const { theme, setTheme } = useContext(ThemeContext);
+    const toggleTheme = () => {
+        setTheme(theme === 'light' ? 'dark' : 'light');
+    }
 
     return (
         <> 
             <header>
-                <nav className="container mx-auto flex justify-between items-center ">
+                <nav className="container mx-auto flex justify-between items-center" style={{ color: theme === 'light' ? 'black' : 'red' }}>
                     <div className='flex justify-between items-center'>
                         <div className='flex items-center gap-2'>
                             <Link to="/home" className='flex items-center gap-2'>
@@ -28,6 +33,7 @@ function Header() {
                         <li><Link to="/blogs">Blog</Link></li> 
                         {/* <li><Link to="/training">Training</Link></li> */}
                         <li>{!hideHeader ? <Link to="/teams">Teams</Link> : <Link to="/login">Login</Link>}</li>
+                        <li><button onClick={toggleTheme}>Change to {theme === 'light' ? 'Dark' : 'Light'}</button></li>
                     </ul>
                 </nav>
             </header>

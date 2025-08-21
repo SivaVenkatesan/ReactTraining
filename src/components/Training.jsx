@@ -377,6 +377,8 @@ function Training({ inputDatatoParent }) {
           {" "}
           React props are used to pass data from parent to child components.
         </p>
+
+        <p>React form npm <code className="text-red-500">react-hook-form</code></p>
       </div>
     </div>
   );
